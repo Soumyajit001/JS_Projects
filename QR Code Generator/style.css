@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(38, 160, 190);
+}
+
+.wrapper{
+    background-color: white;
+    height: 250px;
+    max-width: 400px;
+    border-radius: 7px;
+    padding: 16px 25px 0;
+    transition: height 0.2s ease;
+}
+
+.wrapper.active{
+    height: 550px;
+}
+
+header h1{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(70, 59, 59);
+}
+
+header p{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(93, 89, 89);
+    margin-top: 5px;
+}
+
+.form{
+    margin: 20px 0 30px;
+}
+
+.form input{
+    width: 100%;
+    height: 50px;
+    outline: none;
+    font-size: 16px;
+    padding: 0 15px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.form button{
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(0, 179, 255);
+
+}
+
+.form button:hover{
+    background-color: skyblue;
+}
+
+.QR-Code img{
+    height: 250px;
+    width: 250px;
+}
+
+.QR-Code{
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    padding: 20px 0;
+    border: 1px solid gray;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper.active .QR-Code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
